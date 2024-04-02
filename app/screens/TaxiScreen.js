@@ -11,8 +11,15 @@ import colors from "../config/colors";
 import PrimaryText from "../components/PrimaryText";
 import Card from "../components/Card";
 import SecondaryText from "../components/SecondaryText";
+import ListButton from "../components/ListButton";
+import MapView from "react-native-maps";
 
 const OrderHeader = ({ order }) => {
+  let defaultLongitude = 73.5156235099;
+  let defaultLatitude = 4.1774902032;
+
+  const latitudeDelta = 0.0022;
+  const longitudeDelta = 0.0021;
   return (
     <Card
       style={{
@@ -39,14 +46,23 @@ const OrderHeader = ({ order }) => {
         ${order.price}
       </PrimaryText>
 
-      <View style={{ height: 210, backgroundColor: "gray" }}></View>
+      <MapView
+        style={{ height: 200, borderRadius: 16 }}
+        provider="google"
+        initialRegion={{
+          latitude: defaultLatitude,
+          longitude: defaultLongitude,
+          latitudeDelta: latitudeDelta,
+          longitudeDelta: longitudeDelta,
+        }}
+      />
     </Card>
   );
 };
 
 const OrderDetail = ({ order }) => {
   return (
-    <Card style={{ marginTop: 16 }}>
+    <Card style={{ marginTop: 16, paddingBottom: 8 }}>
       {/*Distance & Time*/}
       <View style={{ flexDirection: "row", height: 43 }}>
         <View
@@ -165,9 +181,10 @@ const OrderDetail = ({ order }) => {
           <SecondaryText style={{ fontSize: 12 }}>Client</SecondaryText>
         </View>
       </View>
-      <TouchableOpacity style={{ height: 40, marginVertical: 16 }}>
-        <PrimaryText style={{ fontSize: 14 }}>Report an issue</PrimaryText>
-      </TouchableOpacity>
+      <ListButton
+        title="Report an Issue"
+        style={{ borderBottomWidth: 0, marginVertical: 8 }}
+      />
     </Card>
   );
 };

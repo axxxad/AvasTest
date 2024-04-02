@@ -13,6 +13,7 @@ import SecondaryText from "../components/SecondaryText";
 import LevelCard from "../components/LevelCard";
 import colors from "../config/colors";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import ListButton from "../components/ListButton";
 
 const ProfileHeader = ({ profile }) => {
   return (
@@ -52,26 +53,6 @@ const ProfileHeader = ({ profile }) => {
   );
 };
 
-const ProfileButton = ({ title, onPress }) => {
-  return (
-    <TouchableOpacity
-      onPress={onPress}
-      style={{
-        borderBottomWidth: 1,
-        borderColor: "#E8EAED",
-        paddingVertical: 16,
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-      }}
-    >
-      <PrimaryText style={{ fontSize: 14, color: "#333333" }}>
-        {title}
-      </PrimaryText>
-      <MaterialCommunityIcons name="chevron-right" size={30} color="#BFC2C9" />
-    </TouchableOpacity>
-  );
-};
 const ProfileButtons = ({ order }) => {
   return (
     <Card
@@ -81,11 +62,11 @@ const ProfileButtons = ({ order }) => {
         paddingTop: 0,
       }}
     >
-      <ProfileButton title="My company" onPress={{}} />
-      <ProfileButton title="My vehicles" onPress={{}} />
-      <ProfileButton title="Driver license" onPress={{}} />
-      <ProfileButton title="Account" onPress={{}} />
-      <ProfileButton title="About" onPress={{}} />
+      <ListButton title="My company" onPress={{}} />
+      <ListButton title="My vehicles" onPress={{}} />
+      <ListButton title="Driver license" onPress={{}} />
+      <ListButton title="Account" onPress={{}} />
+      <ListButton title="About" onPress={{}} />
     </Card>
   );
 };

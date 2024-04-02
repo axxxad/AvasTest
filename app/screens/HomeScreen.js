@@ -8,10 +8,12 @@ export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <Button title="Taxi" onPress={() => navigation.navigate(routes.TAXI)} />
+      <View style={{ height: 16 }} />
       <Button
         title="Profile"
         onPress={() => navigation.navigate(routes.PROFILE)}
       />
+      <View style={{ height: 16 }} />
       <Button
         title="Loyalty"
         onPress={() => navigation.navigate(routes.LOYALTY)}

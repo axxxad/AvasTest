@@ -4,6 +4,7 @@ import PrimaryText from "./PrimaryText";
 import SecondaryText from "./SecondaryText";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import colors from "../config/colors";
+import LevelIcon from "./LevelIcon";
 
 const StatsBox = ({ title, value }) => {
   return (
@@ -22,14 +23,7 @@ export default function LevelCard({ profile }) {
           alignItems: "center",
         }}
       >
-        <Image
-          style={{
-            height: 40,
-            width: 40,
-            borderRadius: 28,
-            backgroundColor: "white",
-          }}
-        />
+        <LevelIcon level={profile.level} size={40} />
         <View
           style={{
             marginLeft: 12,
@@ -40,14 +34,14 @@ export default function LevelCard({ profile }) {
         >
           <View style={{ flexDirection: "row" }}>
             <SecondaryText
-              style={{ fontSize: 14, color: "#333333", marginEnd: 4 }}
+              style={{ fontSize: 14, color: "#8E939C", marginEnd: 4 }}
             >
               Your Level
             </SecondaryText>
             <MaterialCommunityIcons
               name="information-outline"
               size={18}
-              color="#333333"
+              color="#BFC2C9"
             />
           </View>
           <PrimaryText style={{ fontSize: 24 }}>Member</PrimaryText>
