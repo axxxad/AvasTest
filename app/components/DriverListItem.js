@@ -18,7 +18,7 @@ export default function DriverListItem({ driver }) {
     >
       <Image
         source={driver.imgUrl}
-        style={{ height: 42, width: 42, borderRadius: 28 }}
+        style={{ height: 42, width: 42, borderRadius: 21 }}
       />
       <View
         style={{
@@ -35,7 +35,7 @@ export default function DriverListItem({ driver }) {
           {driver.level}
         </SecondaryText>
       </View>
-      <LevelIcon level={driver.level} size={30} />
+      <LevelIcon level={driver.level} size={35} />
     </View>
   );
 }

@@ -34,7 +34,7 @@ export default function LevelCard({ profile }) {
         >
           <View style={{ flexDirection: "row" }}>
             <SecondaryText
-              style={{ fontSize: 14, color: "#8E939C", marginEnd: 4 }}
+              style={{ fontSize: 14, color: "#8E939C", marginRight: 8 }}
             >
               Your Level
             </SecondaryText>

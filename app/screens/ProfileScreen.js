@@ -62,11 +62,23 @@ const ProfileButtons = ({ order }) => {
         paddingTop: 0,
       }}
     >
-      <ListButton title="My company" onPress={{}} />
-      <ListButton title="My vehicles" onPress={{}} />
-      <ListButton title="Driver license" onPress={{}} />
-      <ListButton title="Account" onPress={{}} />
-      <ListButton title="About" onPress={{}} />
+      <ListButton
+        title="My company"
+        onPress={() => console.log("My Company pressed")}
+      />
+      <ListButton
+        title="My vehicles"
+        onPress={() => console.log("My vehicles pressed")}
+      />
+      <ListButton
+        title="Driver license"
+        onPress={() => console.log("Driver license pressed")}
+      />
+      <ListButton
+        title="Account"
+        onPress={() => console.log("Account pressed")}
+      />
+      <ListButton title="About" onPress={() => console.log("About pressed")} />
     </Card>
   );
 };

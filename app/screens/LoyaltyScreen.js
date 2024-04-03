@@ -11,37 +11,31 @@ const DRIVERS = [
     id: 1,
     name: "John Wise",
     level: "ultimate",
-    imgUrl: require("../assets/customer.png"),
+    imgUrl: require("../assets/john-wise.png"),
   },
   {
     id: 2,
     name: "Peter Derel",
     level: "ultimate",
-    imgUrl: require("../assets/driver.png"),
+    imgUrl: require("../assets/peter-derel.png"),
   },
   {
     id: 3,
     name: "Simon Coop",
     level: "gold",
-    imgUrl: require("../assets/driver.png"),
+    imgUrl: require("../assets/simon-coop.png"),
   },
   {
     id: 4,
     name: "Jack Clayton",
     level: "Platinum",
-    imgUrl: require("../assets/customer.png"),
+    imgUrl: require("../assets/jack-clayton.png"),
   },
   {
     id: 5,
-    name: "John Wise",
-    level: "Platinum",
-    imgUrl: require("../assets/driver.png"),
-  },
-  {
-    id: 6,
     name: "James Bond",
     level: "Ultimate",
-    imgUrl: require("../assets/driver.png"),
+    imgUrl: require("../assets/james-bond.png"),
   },
 ];
 
@@ -66,8 +60,14 @@ const LoyaltyBottom = ({ profile }) => {
         paddingTop: 0,
       }}
     >
-      <ListButton title="About the program" onPress={{}} />
-      <ListButton title="View levels benefits" onPress={{}} />
+      <ListButton
+        title="About the program"
+        onPress={() => console.log('About the program" pressed')}
+      />
+      <ListButton
+        title="View levels benefits"
+        onPress={() => console.log("View levels benefit pressed")}
+      />
       <PrimaryText style={{ marginTop: 32, marginBottom: 16, fontSize: 18 }}>
         Top level drivers
       </PrimaryText>
