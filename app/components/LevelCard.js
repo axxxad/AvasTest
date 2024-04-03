@@ -70,6 +70,7 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 8,
     borderRadius: 8,
+    justifyContent: "space-between",
     backgroundColor: "white",
   },
 });
